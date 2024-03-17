@@ -1,10 +1,18 @@
 {
   "name": "llrt-aws-sam-example",
+  "scripts": {
+    "build": "esbuild --bundle --keep-names --target=ESNext --tsconfig=tsconfig.json --outfile=hello-world/app.js src/app.ts",
+    "sam-build": "npm run build && sam build",
+    "sam": "npm run build && sam build && sam local invoke"
+  },
   "devDependencies": {
     "@types/aws-lambda": "^8.10.136",
+    "@types/node": "^20.11.28",
     "typescript": "^5.4.2"
   },
   "dependencies": {
-    "@kinde-oss/kinde-nodejs-sdk": "^1.2.3"
+    "@kinde-oss/kinde-nodejs-sdk": "^1.2.3",
+    "dotenv": "^16.4.5",
+    "esbuild": "^0.19.8"
   }
 }

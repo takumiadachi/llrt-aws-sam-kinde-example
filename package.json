@@ -1,0 +1,10 @@
+{
+  "name": "llrt-aws-sam-example",
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.136",
+    "typescript": "^5.4.2"
+  },
+  "dependencies": {
+    "@kinde-oss/kinde-nodejs-sdk": "^1.2.3"
+  }
+}
